@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- MAIN SEO TAGS -->
+  <title>FC Fulbert — Club de football étudiant | fc fulbert</title>
+  <meta name="description" content="FC Fulbert, club de football étudiant : actualités, calendrier, effectif, recrutement et contact. Rejoignez le FC Fulbert aujourd'hui.">
+  <meta name="keywords" content="fc fulbert, club de foot étudiant, football universitaire, calendrier fc fulbert, effectif fc fulbert">
+  <link rel="canonical" href="https://example.com/" />
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FC Fulbert — Club de football étudiant | fc fulbert">
+  <meta property="og:description" content="Actualités, calendrier, effectif et contact du FC Fulbert, le club de foot étudiant local.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:site_name" content="FC Fulbert">
+  <meta property="og:image" content="/images/og-fc-fulbert.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FC Fulbert — Club de football étudiant | fc fulbert">
+  <meta name="twitter:description" content="Rejoignez le FC Fulbert — calendrier, news, photos et contact.">
+  <meta name="twitter:image" content="/images/og-fc-fulbert.jpg">
+
+  <!-- Structured Data JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "FC Fulbert",
+    "url": "https://example.com/",
+    "logo": "https://example.com/images/logo.png",
+    "description": "FC Fulbert, club de football étudiant.",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Université / Association étudiante"
+    },
+    "sport": "Football",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Critical CSS in-head for performance (pure CSS site) -->
+  <style>
+    /* --- Variables --- */
+    :root{
+      --accent:#c0392b; /* rouge / couleur équipe */
+      --dark:#0b1220;
+      --muted:#6b7280;
+      --maxw:1100px;
+      --radius:12px;
+      --gap:18px;
+      --ff: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* --- Reset-ish --- */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:var(--ff);line-height:1.5;color:var(--dark);background:linear-gradient(180deg,#fff,#f7f8fb);
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:16px;
+    }
+
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    header,main,footer,nav,section{display:block}
+
+    /* --- Layout --- */
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+    .grid{display:grid;gap:var(--gap)}
+
+    /* --- Header / Nav --- */
+    header{background:#fff;padding:18px 0;box-shadow:0 2px 8px rgba(10,10,10,0.04);position:sticky;top:0;z-index:50}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+    .site-title{font-size:1.15rem;font-weight:700}
+    nav{margin-left:auto}
+    .nav-list{display:flex;gap:18px;list-style:none;padding:0;margin:0;align-items:center}
+    .nav-list a{padding:6px 8px;border-radius:8px}
+    .cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:10px;font-weight:600}
+
+    /* --- Hero --- */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:28px 0}
+    .hero .badge{background:linear-gradient(90deg,#fff 0,#fff);padding:6px 10px;border-radius:999px;color:var(--muted);display:inline-block;font-weight:700}
+    .hero h1{font-size:2rem;margin:6px 0}
+    .hero p{color:var(--muted);margin:0}
+    .hero-cta{display:flex;gap:12px;margin-top:12px}
+
+    /* --- Cards --- */
+    .card{background:#fff;padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(20,20,40,0.04)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+    /* --- Team / Roster --- */
+    .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+    .player{display:flex;gap:12px;align-items:center}
+    .player img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+    .player .meta{font-size:.95rem}
+    .role{color:var(--muted);font-size:.85rem}
+
+    /* --- Table --- */
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px;border-bottom:1px solid #eef2f7;text-align:left}
+    th{font-weight:700}
+
+    /* --- Gallery --- */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+
+    /* --- Footer --- */
+    footer{padding:28px 0;color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:1fr 220px;gap:24px}
+
+    /* --- Responsive --- */
+    @media (max-width:900px){
+      .cards{grid-template-columns:repeat(2,1fr)}
+      header{padding:12px 0}
+      .hero h1{font-size:1.6rem}
+    }
+    @media (max-width:600px){
+      .cards{grid-template-columns:1fr}
+      .nav-list{display:none}
+      .mobile-nav-toggle{display:inline-block}
+    }
+
+    /* --- Accessibility helpers --- */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* --- Simple CSS-only mobile menu (uses :target) --- */\    
+    #menu{display:none}
+    #menu:target{display:block;position:absolute;left:0;right:0;top:76px;background:#fff;padding:12px 20px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    #menu a{display:block;padding:8px 0}
+
+    /* --- Small utility classes --- */
+    .muted{color:var(--muted)}
+    .small{font-size:.9rem}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container" style="display:flex;align-items:center;gap:16px">
+      <div class="brand">
+        <img src="/images/logo.png" alt="Logo FC Fulbert" loading="lazy">
+        <div>
+          <div class="site-title">FC Fulbert</div>
+          <div class="small muted">Club de football étudiant</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navigation principale" style="display:flex;align-items:center">
+        <a href="#menu" class="mobile-nav-toggle sr-only">Menu</a>
+        <ul class="nav-list">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#actualites">Actualités</a></li>
+          <li><a href="#calendrier">Calendrier</a></li>
+          <li><a href="#effectif">Effectif</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="cta" href="#rejoindre">Rejoindre</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile menu (CSS only) -->
+      <div id="menu" aria-hidden="true">
+        <a href="#home">Accueil</a>
+        <a href="#actualites">Actualités</a>
+        <a href="#calendrier">Calendrier</a>
+        <a href="#effectif">Effectif</a>
+        <a href="#contact">Contact</a>
+        <a href="#rejoindre">Rejoindre</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="container hero" aria-labelledby="hero-title">
+      <div>
+        <span class="badge">Équipe étudiante</span>
+        <h1 id="hero-title">FC Fulbert — Club de football étudiant</h1>
+        <p>Bienvenue sur le site officiel du <strong>FC Fulbert</strong>. Retrouvez les dernières actualités, le calendrier des matchs, l'effectif et les informations pour rejoindre le club.</p>
+        <div class="hero-cta">
+          <a class="cta" href="#calendrier">Prochain match</a>
+          <a href="#actualites">Voir les actualités</a>
+        </div>
+      </div>
+      <div class="card" aria-hidden="false">
+        <h2 class="small">À la une</h2>
+        <article>
+          <h3 style="margin-top:6px">Nouvelle saison 2025 — objectifs et recrutement</h3>
+          <p class="muted small">Le FC Fulbert lance les entraînements. Tous les étudiants sont invités à participer aux sélections. <a href="#rejoindre">Postulez ici</a>.</p>
+        </article>
+        <hr style="margin:12px 0">
+        <h4 class="small muted">Dernier résultat</h4>
+        <p style="margin:6px 0">FC Fulbert 2 — 1 Élèves United</p>
+      </div>
+    </section>
+
+    <!-- --- ACTUALITÉS --- -->
+    <section id="actualites" class="container" aria-labelledby="news-title" style="padding-top:8px">
+      <h2 id="news-title">Actualités du FC Fulbert</h2>
+      <div class="grid" style="grid-template-columns:2fr 1fr;gap:18px">
+        <div>
+          <article class="card" itemscope itemtype="https://schema.org/NewsArticle">
+            <meta itemprop="headline" content="Succès du FC Fulbert à la coupe universitaire">
+            <h3>Succès du FC Fulbert à la coupe universitaire</h3>
+            <p class="muted small">Publié le 22 septembre 2025 — Une victoire qui relance la dynamique du club.</p>
+            <p>Le FC Fulbert a remporté la coupe locale après une série de performances remarquées par les entraîneurs et les supporters. <a href="#calendrier">Voir le calendrier</a>.</p>
+          </article>
+
+          <article class="card" style="margin-top:12px" itemscope itemtype="https://schema.org/NewsArticle">
+            <h3>Opération recrutement : rejoignez-nous</h3>
+            <p class="muted small">Publié le 5 septembre 2025</p>
+            <p>Le club organise une journée portes ouvertes pour les nouveaux joueurs. Contactez-nous pour vous inscrire.</p>
+          </article>
+        </div>
+
+        <aside class="card">
+          <h4>Informations rapides</h4>
+          <ul>
+            <li>Entraînements : mardi & jeudi 19h - 21h</li>
+            <li>Lieu : Stade Universitaire</li>
+            <li>Contact : <a href="mailto:contact@fcfulbert.fr">contact@fcfulbert.fr</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- --- CALENDRIER --- -->
+    <section id="calendrier" class="container" aria-labelledby="cal-title" style="padding-top:20px">
+      <h2 id="cal-title">Calendrier & résultats</h2>
+      <div class="card">
+        <table aria-describedby="cal-desc">
+          <caption id="cal-desc" class="sr-only">Calendrier des prochains matchs du FC Fulbert</caption>
+          <thead>
+            <tr><th>Date</th><th>Adversaire</th><th>Lieu</th><th>Heure</th><th>Résultat</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>12/10/2025</td><td>Rivaux Académiques</td><td>Stade Universitaire</td><td>15:00</td><td>-</td></tr>
+            <tr><td>26/10/2025</td><td>Équipe Rouge</td><td>Extérieur</td><td>18:00</td><td>-</td></tr>
+            <tr><td>02/11/2025</td><td>Camarades FC</td><td>Stade Municipal</td><td>16:00</td><td>-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Structured data for an event (next match) -->
+      <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"SportsEvent",
+        "name":"FC Fulbert vs Rivaux Académiques",
+        "startDate":"2025-10-12T15:00:00+02:00",
+        "location":{
+          "@type":"Place",
+          "name":"Stade Universitaire"
+        },
+        "performer":{
+          "@type":"SportsTeam",
+          "name":"FC Fulbert"
+        }
+      }
+      </script>
+    </section>
+
+    <!-- --- EFFECTIF --- -->
+    <section id="effectif" class="container" aria-labelledby="team-title" style="padding-top:20px">
+      <h2 id="team-title">Effectif</h2>
+      <p class="muted small">Liste principale des joueurs et du staff — optimisée pour la recherche par mot-clé "fc fulbert".</p>
+
+      <div class="card roster" role="list">
+        <!-- Example players: use real photos when available, include alt text with keyword -->
+        <div class="player" role="listitem">
+          <img src="/images/player-1.jpg" alt="Alex Martin - Gardien - FC Fulbert" loading="lazy">
+          <div class="meta">
+            <div><strong>Alex Martin</strong></div>
+            <div class="role">Gardien</div>
+          </div>
+        </div>
+        <div class="player" role="listitem">
+          <img src="/images/player-2.jpg" alt="Youssef Ben - Défenseur - FC Fulbert" loading="lazy">
+          <div class="meta"><div><strong>Youssef Ben</strong></div><div class="role">Défenseur</div></div>
+        </div>
+        <div class="player" role="listitem">
+          <img src="/images/player-3.jpg" alt="Marie Dubois - Attaquante - FC Fulbert" loading="lazy">
+          <div class="meta"><div><strong>Marie Dubois</strong></div><div class="role">Attaquante</div></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- --- GALERIE --- -->
+    <section id="galerie" class="container" aria-labelledby="gallery-title" style="padding-top:20px">
+      <h2 id="gallery-title">Galerie photo</h2>
+      <p class="small muted">Photos du club — ajoutez des balises alt contenant "fc fulbert" pour améliorer le référencement.</p>
+      <div class="gallery">
+        <figure class="card"><img src="/images/match1.jpg" alt="Match FC Fulbert - action" loading="lazy"><figcaption class="small muted">Action lors d'un match du FC Fulbert</figcaption></figure>
+        <figure class="card"><img src="/images/training1.jpg" alt="Entraînement FC Fulbert" loading="lazy"><figcaption class="small muted">Entraînement de l'équipe</figcaption></figure>
+        <figure class="card"><img src="/images/team1.jpg" alt="Photo d'équipe FC Fulbert" loading="lazy"><figcaption class="small muted">Photo officielle</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- --- REJOINDRE / CONTACT --- -->
+    <section id="rejoindre" class="container" aria-labelledby="join-title" style="padding-top:20px">
+      <h2 id="join-title">Rejoindre le FC Fulbert</h2>
+      <div class="grid" style="grid-template-columns:1fr 320px;gap:18px">
+        <div class="card">
+          <h3>Intéressé·e ?</h3>
+          <p class="muted small">Remplissez le formulaire ci-contre ou envoyez un e-mail pour vous inscrire aux sélections.</p>
+          <h4 style="margin-top:12px">Informations utiles</h4>
+          <ul>
+            <li>Âge : étudiants & étudiantes</li>
+            <li>Équipement : tenue sportive, protège-tibias</li>
+            <li>Licence : non exigée pour les essais</li>
+          </ul>
+        </div>
+
+        <aside class="card" id="contact" aria-labelledby="contact-title">
+          <h3 id="contact-title">Contact & inscription</h3>
+          <!-- Note: HTML-only site — form can post to an email service / back-end when deployed -->
+          <form action="/merci" method="post">
+            <label for="nom">Nom complet</label><br>
+            <input id="nom" name="nom" type="text" required style="width:100%;padding:8px;margin-top:6px;margin-bottom:10px;border-radius:8px;border:1px solid #e6e9ef">
+
+            <label for="mail">Email</label><br>
+            <input id="mail" name="mail" type="email" required style="width:100%;padding:8px;margin-top:6px;margin-bottom:10px;border-radius:8px;border:1px solid #e6e9ef">
+
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="4" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef">Je souhaite participer aux sélections du FC Fulbert.</textarea>
+
+            <button type="submit" class="cta" style="margin-top:10px">Envoyer</button>
+          </form>
+
+          <hr style="margin:12px 0">
+          <div class="small muted">ou contactez-nous : <a href="mailto:contact@fcfulbert.fr">contact@fcfulbert.fr</a></div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>FC Fulbert</h4>
+        <p class="muted small">Club de football étudiant — Site optimisé SEO pour le mot-clé "fc fulbert".</p>
+        <nav aria-label="Liens utiles">
+          <ul style="list-style:none;padding:0;display:flex;gap:12px;margin-top:12px">
+            <li><a href="#calendrier">Calendrier</a></li>
+            <li><a href="#effectif">Effectif</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <h5>Infos</h5>
+        <p class="small muted">Adresse : Stade Universitaire — Ville<br>Téléphone : 01 23 45 67 89</p>
+      </div>
+    </div>
+
+    <div class="container" style="border-top:1px solid #eef2f7;margin-top:18px;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
+      <small class="muted">© FC Fulbert 2025</small>
+      <small class="muted">Conçu pour le référencement — mot-clé : "fc fulbert"</small>
+    </div>
+  </footer>
+
+  <!-- Helpful HTML comments for whoever will edit the site later:
+       - Replace /images/* with real optimized images (use descriptive filenames containing the keyword "fc-fulbert" when possible).
+       - Keep title + H1 unique per page if you split this into multiple pages. For a multipage site: use titles like "FC Fulbert — Actualités | fc fulbert".
+       - Add server-side sitemap.xml and robots.txt when deploying.
+       - Use compressed images (webp) and HTTP caching.
+  -->
+
+</body>
+</html>

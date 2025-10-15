@@ -1,375 +1,672 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Fulbert Officiel | Liste des Joueurs et Classement du Club de Football</title>
+    <meta name="description" content="Découvrez le site officiel du FC Fulbert. Retrouvez la liste complète des joueurs du FC Fulbert, le classement actualisé du championnat, l'actualité et toutes les informations de notre club de football.">
+    <meta name="keywords" content="FC Fulbert, Liste des joueurs du FC Fulbert, Classement du FC Fulbert, football Fulbert, club football, effectif FC Fulbert">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="FC Fulbert Officiel | Joueurs et Classement">
+    <meta property="og:description" content="Site officiel du FC Fulbert. Découvrez la liste de nos joueurs, notre classement et toute l'actualité du club.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.fcfulbert.fr">
+    
+    <style>
+        /* ... (Le style CSS reste inchangé pour l'efficacité) ... */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- MAIN SEO TAGS -->
-  <title>FC Fulbert — Club de football étudiant | fc fulbert</title>
-  <meta name="description" content="FC Fulbert, club de football étudiant : actualités, calendrier, effectif, recrutement et contact. Rejoignez le FC Fulbert aujourd'hui.">
-  <meta name="keywords" content="fc fulbert, club de foot étudiant, football universitaire, calendrier fc fulbert, effectif fc fulbert">
-  <link rel="canonical" href="https://example.com/" />
-  <meta name="robots" content="index,follow">
+        :root {
+            --primary: #1e40af;
+            --secondary: #3b82f6;
+            --accent: #fbbf24;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="FC Fulbert — Club de football étudiant | fc fulbert">
-  <meta property="og:description" content="Actualités, calendrier, effectif et contact du FC Fulbert, le club de foot étudiant local.">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:site_name" content="FC Fulbert">
-  <meta property="og:image" content="/images/og-fc-fulbert.jpg">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FC Fulbert — Club de football étudiant | fc fulbert">
-  <meta name="twitter:description" content="Rejoignez le FC Fulbert — calendrier, news, photos et contact.">
-  <meta name="twitter:image" content="/images/og-fc-fulbert.jpg">
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-  <!-- Structured Data JSON-LD (SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsOrganization",
-    "name": "FC Fulbert",
-    "url": "https://example.com/",
-    "logo": "https://example.com/images/logo.png",
-    "description": "FC Fulbert, club de football étudiant.",
-    "memberOf": {
-      "@type": "Organization",
-      "name": "Université / Association étudiante"
-    },
-    "sport": "Football",
-    "sameAs": []
-  }
-  </script>
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
 
-  <!-- Critical CSS in-head for performance (pure CSS site) -->
-  <style>
-    /* --- Variables --- */
-    :root{
-      --accent:#c0392b; /* rouge / couleur équipe */
-      --dark:#0b1220;
-      --muted:#6b7280;
-      --maxw:1100px;
-      --radius:12px;
-      --gap:18px;
-      --ff: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-    /* --- Reset-ish --- */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;font-family:var(--ff);line-height:1.5;color:var(--dark);background:linear-gradient(180deg,#fff,#f7f8fb);
-      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:16px;
-    }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
 
-    a{color:var(--accent);text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
-    header,main,footer,nav,section{display:block}
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
 
-    /* --- Layout --- */
-    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
-    .grid{display:grid;gap:var(--gap)}
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
 
-    /* --- Header / Nav --- */
-    header{background:#fff;padding:18px 0;box-shadow:0 2px 8px rgba(10,10,10,0.04);position:sticky;top:0;z-index:50}
-    .brand{display:flex;gap:12px;align-items:center}
-    .brand img{width:56px;height:56px;border-radius:8px;object-fit:cover}
-    .site-title{font-size:1.15rem;font-weight:700}
-    nav{margin-left:auto}
-    .nav-list{display:flex;gap:18px;list-style:none;padding:0;margin:0;align-items:center}
-    .nav-list a{padding:6px 8px;border-radius:8px}
-    .cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:10px;font-weight:600}
+        nav a:hover {
+            color: var(--accent);
+        }
 
-    /* --- Hero --- */
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:28px 0}
-    .hero .badge{background:linear-gradient(90deg,#fff 0,#fff);padding:6px 10px;border-radius:999px;color:var(--muted);display:inline-block;font-weight:700}
-    .hero h1{font-size:2rem;margin:6px 0}
-    .hero p{color:var(--muted);margin:0}
-    .hero-cta{display:flex;gap:12px;margin-top:12px}
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95), rgba(59, 130, 246, 0.95)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e40af" width="1200" height="600"/><circle cx="200" cy="100" r="80" fill="%233b82f6" opacity="0.3"/><circle cx="800" cy="400" r="120" fill="%233b82f6" opacity="0.3"/><circle cx="1000" cy="150" r="60" fill="%233b82f6" opacity="0.3"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
 
-    /* --- Cards --- */
-    .card{background:#fff;padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(20,20,40,0.04)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-    /* --- Team / Roster --- */
-    .roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-    .player{display:flex;gap:12px;align-items:center}
-    .player img{width:64px;height:64px;border-radius:8px;object-fit:cover}
-    .player .meta{font-size:.95rem}
-    .role{color:var(--muted);font-size:.85rem}
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
 
-    /* --- Table --- */
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:10px;border-bottom:1px solid #eef2f7;text-align:left}
-    th{font-weight:700}
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
-    /* --- Gallery --- */
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
 
-    /* --- Footer --- */
-    footer{padding:28px 0;color:var(--muted)}
-    .footer-grid{display:grid;grid-template-columns:1fr 220px;gap:24px}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    /* --- Responsive --- */
-    @media (max-width:900px){
-      .cards{grid-template-columns:repeat(2,1fr)}
-      header{padding:12px 0}
-      .hero h1{font-size:1.6rem}
-    }
-    @media (max-width:600px){
-      .cards{grid-template-columns:1fr}
-      .nav-list{display:none}
-      .mobile-nav-toggle{display:inline-block}
-    }
+        section {
+            padding: 4rem 0;
+        }
 
-    /* --- Accessibility helpers --- */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
 
-    /* --- Simple CSS-only mobile menu (uses :target) --- */\    
-    #menu{display:none}
-    #menu:target{display:block;position:absolute;left:0;right:0;top:76px;background:#fff;padding:12px 20px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
-    #menu a{display:block;padding:8px 0}
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
 
-    /* --- Small utility classes --- */
-    .muted{color:var(--muted)}
-    .small{font-size:.9rem}
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
 
-  </style>
+        .player-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .player-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .player-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .player-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .player-position {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .player-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--light);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text);
+        }
+
+        .ranking-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        th, td {
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--light);
+            transition: background 0.3s;
+        }
+
+        tbody tr:hover {
+            background: #f1f5f9;
+        }
+
+        .highlight-team {
+            background: #dbeafe;
+            font-weight: bold;
+        }
+
+        .position {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .team-logo {
+            width: 30px;
+            height: 30px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .search-box {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .search-input {
+            padding: 1rem 2rem;
+            width: 100%;
+            max-width: 500px;
+            border: 2px solid var(--secondary);
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .search-input:focus {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .players-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.8rem;
+            }
+        }
+
+        .breadcrumb {
+            background: white;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb-list {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            color: var(--text);
+        }
+
+        .breadcrumb-list li::after {
+            content: '›';
+            margin-left: 0.5rem;
+        }
+
+        .breadcrumb-list li:last-child::after {
+            content: '';
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <div class="container" style="display:flex;align-items:center;gap:16px">
-      <div class="brand">
-        <img src="fcfulbertlogo.png" alt="Logo FC Fulbert" loading="lazy">
-        <div>
-          <div class="site-title">FC Fulbert</div>
-          <div class="small muted">Club de football étudiant</div>
-        </div>
-      </div>
-
-      <nav aria-label="Navigation principale" style="display:flex;align-items:center">
-        <a href="#menu" class="mobile-nav-toggle sr-only">Menu</a>
-        <ul class="nav-list">
-          <li><a href="#home">Accueil</a></li>
-          <li><a href="#actualites">Actualités</a></li>
-          <li><a href="#calendrier">Calendrier</a></li>
-          <li><a href="#effectif">Effectif</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a class="cta" href="#rejoindre">Rejoindre</a></li>
-        </ul>
-      </nav>
-
-      <!-- Mobile menu (CSS only) -->
-      <div id="menu" aria-hidden="true">
-        <a href="#home">Accueil</a>
-        <a href="#actualites">Actualités</a>
-        <a href="#calendrier">Calendrier</a>
-        <a href="#effectif">Effectif</a>
-        <a href="#contact">Contact</a>
-        <a href="#rejoindre">Rejoindre</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="home">
-    <section class="container hero" aria-labelledby="hero-title">
-      <div>
-        <span class="badge">Équipe étudiante</span>
-        <h1 id="hero-title">FC Fulbert — Club de football étudiant</h1>
-        <p>Bienvenue sur le site officiel du <strong>FC Fulbert</strong>. Retrouvez les dernières actualités, le calendrier des matchs, l'effectif et les informations pour rejoindre le club.</p>
-        <div class="hero-cta">
-          <a class="cta" href="#calendrier">Prochain match</a>
-          <a href="#actualites">Voir les actualités</a>
-        </div>
-      </div>
-      <div class="card" aria-hidden="false">
-        <h2 class="small">À la une</h2>
-        <article>
-          <h3 style="margin-top:6px">Nouvelle saison 2025 — objectifs et recrutement</h3>
-          <p class="muted small">Le FC Fulbert lance les entraînements. Tous les étudiants sont invités à participer aux sélections. <a href="#rejoindre">Postulez ici</a>.</p>
-        </article>
-        <hr style="margin:12px 0">
-        <h4 class="small muted">Dernier résultat</h4>
-        <p style="margin:6px 0">FC Fulbert 2 — 1 Élèves United</p>
-      </div>
-    </section>
-
-    <!-- --- ACTUALITÉS --- -->
-    <section id="actualites" class="container" aria-labelledby="news-title" style="padding-top:8px">
-      <h2 id="news-title">Actualités du FC Fulbert</h2>
-      <div class="grid" style="grid-template-columns:2fr 1fr;gap:18px">
-        <div>
-          <article class="card" itemscope itemtype="https://schema.org/NewsArticle">
-            <meta itemprop="headline" content="Succès du FC Fulbert à la coupe universitaire">
-            <h3>Succès du FC Fulbert à la coupe universitaire</h3>
-            <p class="muted small">Publié le 22 septembre 2025 — Une victoire qui relance la dynamique du club.</p>
-            <p>Le FC Fulbert a remporté la coupe locale après une série de performances remarquées par les entraîneurs et les supporters. <a href="#calendrier">Voir le calendrier</a>.</p>
-          </article>
-
-          <article class="card" style="margin-top:12px" itemscope itemtype="https://schema.org/NewsArticle">
-            <h3>Opération recrutement : rejoignez-nous</h3>
-            <p class="muted small">Publié le 5 septembre 2025</p>
-            <p>Le club organise une journée portes ouvertes pour les nouveaux joueurs. Contactez-nous pour vous inscrire.</p>
-          </article>
-        </div>
-
-        <aside class="card">
-          <h4>Informations rapides</h4>
-          <ul>
-            <li>Entraînements : mardi & jeudi 19h - 21h</li>
-            <li>Lieu : Stade Universitaire</li>
-            <li>Contact : <a href="mailto:contact@fcfulbert.fr">contact@fcfulbert.fr</a></li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- --- CALENDRIER --- -->
-    <section id="calendrier" class="container" aria-labelledby="cal-title" style="padding-top:20px">
-      <h2 id="cal-title">Calendrier & résultats</h2>
-      <div class="card">
-        <table aria-describedby="cal-desc">
-          <caption id="cal-desc" class="sr-only">Calendrier des prochains matchs du FC Fulbert</caption>
-          <thead>
-            <tr><th>Date</th><th>Adversaire</th><th>Lieu</th><th>Heure</th><th>Résultat</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>12/10/2025</td><td>Rivaux Académiques</td><td>Stade Universitaire</td><td>15:00</td><td>-</td></tr>
-            <tr><td>26/10/2025</td><td>Équipe Rouge</td><td>Extérieur</td><td>18:00</td><td>-</td></tr>
-            <tr><td>02/11/2025</td><td>Camarades FC</td><td>Stade Municipal</td><td>16:00</td><td>-</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Structured data for an event (next match) -->
-      <script type="application/ld+json">
-      {
-        "@context":"https://schema.org",
-        "@type":"SportsEvent",
-        "name":"FC Fulbert vs Rivaux Académiques",
-        "startDate":"2025-10-12T15:00:00+02:00",
-        "location":{
-          "@type":"Place",
-          "name":"Stade Universitaire"
-        },
-        "performer":{
-          "@type":"SportsTeam",
-          "name":"FC Fulbert"
-        }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsTeam",
+      "name": "FC Fulbert",
+      "sport": "Football (Soccer)",
+      "url": "https://www.fcfulbert.fr",
+      "logo": "https://www.fcfulbert.fr/logo.png" /* À Remplacer par l'URL réelle du logo */,
+      "description": "Club de football officiel FC Fulbert : retrouvez la liste des joueurs et le classement.",
+      "member": [
+        /* Idéalement, liste des joueurs avec un lien vers leur page si elles existent */
+        { "@type": "Person", "name": "Martin Dubois" },
+        { "@type": "Person", "name": "Julien Petit" },
+        { "@type": "Person", "name": "Nicolas Laurent" }
+        /* ... ajouter tous les joueurs ... */
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stade Fulbert",
+        "addressLocality": "Fulbert",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Général",
+        "email": "contact@fcfulbert.fr"
       }
-      </script>
-    </section>
-
-    <!-- --- EFFECTIF --- -->
-    <section id="effectif" class="container" aria-labelledby="team-title" style="padding-top:20px">
-      <h2 id="team-title">Effectif</h2>
-      <p class="muted small">Liste principale des joueurs et du staff — optimisée pour la recherche par mot-clé "fc fulbert".</p>
-
-      <div class="card roster" role="list">
-        <!-- Example players: use real photos when available, include alt text with keyword -->
-        <div class="player" role="listitem">
-          <img src="/images/player-1.jpg" alt="Alex Martin - Gardien - FC Fulbert" loading="lazy">
-          <div class="meta">
-            <div><strong>Alex Martin</strong></div>
-            <div class="role">Gardien</div>
-          </div>
-        </div>
-        <div class="player" role="listitem">
-          <img src="/images/player-2.jpg" alt="Youssef Ben - Défenseur - FC Fulbert" loading="lazy">
-          <div class="meta"><div><strong>Youssef Ben</strong></div><div class="role">Défenseur</div></div>
-        </div>
-        <div class="player" role="listitem">
-          <img src="/images/player-3.jpg" alt="Marie Dubois - Attaquante - FC Fulbert" loading="lazy">
-          <div class="meta"><div><strong>Marie Dubois</strong></div><div class="role">Attaquante</div></div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- --- GALERIE --- -->
-    <section id="galerie" class="container" aria-labelledby="gallery-title" style="padding-top:20px">
-      <h2 id="gallery-title">Galerie photo</h2>
-      <p class="small muted">Photos du club — ajoutez des balises alt contenant "fc fulbert" pour améliorer le référencement.</p>
-      <div class="gallery">
-        <figure class="card"><img src="/images/match1.jpg" alt="Match FC Fulbert - action" loading="lazy"><figcaption class="small muted">Action lors d'un match du FC Fulbert</figcaption></figure>
-        <figure class="card"><img src="/images/training1.jpg" alt="Entraînement FC Fulbert" loading="lazy"><figcaption class="small muted">Entraînement de l'équipe</figcaption></figure>
-        <figure class="card"><img src="/images/team1.jpg" alt="Photo d'équipe FC Fulbert" loading="lazy"><figcaption class="small muted">Photo officielle</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- --- REJOINDRE / CONTACT --- -->
-    <section id="rejoindre" class="container" aria-labelledby="join-title" style="padding-top:20px">
-      <h2 id="join-title">Rejoindre le FC Fulbert</h2>
-      <div class="grid" style="grid-template-columns:1fr 320px;gap:18px">
-        <div class="card">
-          <h3>Intéressé·e ?</h3>
-          <p class="muted small">Remplissez le formulaire ci-contre ou envoyez un e-mail pour vous inscrire aux sélections.</p>
-          <h4 style="margin-top:12px">Informations utiles</h4>
-          <ul>
-            <li>Âge : étudiants & étudiantes</li>
-            <li>Équipement : tenue sportive, protège-tibias</li>
-            <li>Licence : non exigée pour les essais</li>
-          </ul>
-        </div>
-
-        <aside class="card" id="contact" aria-labelledby="contact-title">
-          <h3 id="contact-title">Contact & inscription</h3>
-          <!-- Note: HTML-only site — form can post to an email service / back-end when deployed -->
-          <form action="/merci" method="post">
-            <label for="nom">Nom complet</label><br>
-            <input id="nom" name="nom" type="text" required style="width:100%;padding:8px;margin-top:6px;margin-bottom:10px;border-radius:8px;border:1px solid #e6e9ef">
-
-            <label for="mail">Email</label><br>
-            <input id="mail" name="mail" type="email" required style="width:100%;padding:8px;margin-top:6px;margin-bottom:10px;border-radius:8px;border:1px solid #e6e9ef">
-
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" rows="4" style="width:100%;padding:8px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef">Je souhaite participer aux sélections du FC Fulbert.</textarea>
-
-            <button type="submit" class="cta" style="margin-top:10px">Envoyer</button>
-          </form>
-
-          <hr style="margin:12px 0">
-          <div class="small muted">ou contactez-nous : <a href="mailto:contact@fcfulbert.fr">contact@fcfulbert.fr</a></div>
-        </aside>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <h4>FC Fulbert</h4>
-        <p class="muted small">Club de football étudiant — Site optimisé SEO pour le mot-clé "fc fulbert".</p>
-        <nav aria-label="Liens utiles">
-          <ul style="list-style:none;padding:0;display:flex;gap:12px;margin-top:12px">
-            <li><a href="#calendrier">Calendrier</a></li>
-            <li><a href="#effectif">Effectif</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+    }
+    </script>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">⚽</div>
+                <span style="display:none">FC Fulbert</span>
+                <a href="#accueil" title="Accueil du FC Fulbert"><span>FC FULBERT</span></a>
+            </div>
+            <ul>
+                <li><a href="#accueil" title="Actualités et Accueil du FC Fulbert">Accueil</a></li>
+                <li><a href="#joueurs" title="Liste complète des joueurs du FC Fulbert">Joueurs</a></li>
+                <li><a href="#classement" title="Classement officiel du FC Fulbert">Classement</a></li>
+                <li><a href="#contact" title="Contacter le club FC Fulbert">Contact</a></li>
+            </ul>
         </nav>
-      </div>
-      <div>
-        <h5>Infos</h5>
-        <p class="small muted">Adresse : Stade Universitaire — Ville<br>Téléphone : 01 23 45 67 89</p>
-      </div>
+    </header>
+
+    <div class="breadcrumb">
+        <ul class="breadcrumb-list">
+            <li><a href="#accueil" title="Accueil FC Fulbert">Accueil</a></li>
+            <li>FC Fulbert Officiel</li>
+        </ul>
     </div>
 
-    <div class="container" style="border-top:1px solid #eef2f7;margin-top:18px;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
-      <small class="muted">© FC Fulbert 2025</small>
-      <small class="muted">Conçu pour le référencement — mot-clé : "fc fulbert"</small>
-    </div>
-  </footer>
+    <section class="hero" id="accueil">
+        <h1>Bienvenue au <strong>FC FULBERT</strong>, votre club de football</h1>
+        <p>Passion, Excellence et Esprit d'Équipe. Suivez le classement et les joueurs du FC Fulbert.</p>
+        <a href="#joueurs" class="cta-button" title="Découvrir l'Effectif du FC Fulbert">Découvrir l'Équipe</a>
+    </section>
 
-  <!-- Helpful HTML comments for whoever will edit the site later:
-       - Replace /images/* with real optimized images (use descriptive filenames containing the keyword "fc-fulbert" when possible).
-       - Keep title + H1 unique per page if you split this into multiple pages. For a multipage site: use titles like "FC Fulbert — Actualités | fc fulbert".
-       - Add server-side sitemap.xml and robots.txt when deploying.
-       - Use compressed images (webp) and HTTP caching.
-  -->
+    <main>
+        <section id="joueurs">
+            <div class="container">
+                <h2>Liste des Joueurs Officiels du FC Fulbert</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--text);">
+                    Retrouvez ici la liste complète et les statistiques de tous les joueurs du FC Fulbert.
+                </p>
+                <div class="search-box">
+                    <input type="text" class="search-input" id="searchPlayer" placeholder="Rechercher un joueur du FC Fulbert par nom ou poste...">
+                </div>
+                <div class="players-grid" id="playersGrid">
+                    </div>
+            </div>
+        </section>
 
+        <section id="classement">
+            <div class="container">
+                <h2>Classement du FC Fulbert en Championnat</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--text);">
+                    Suivez en direct le <strong>classement du FC Fulbert</strong> dans le championnat. Notre équipe est actuellement classée ${ranking.find(t => t.team === 'FC Fulbert').position}ème.
+                </p>
+                <div class="ranking-table">
+                    <figure>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Équipe</th>
+                                    <th>Pts</th>
+                                    <th>J</th>
+                                    <th>G</th>
+                                    <th>N</th>
+                                    <th>P</th>
+                                    <th>Diff</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rankingTable">
+                                </tbody>
+                        </table>
+                        <figcaption style="padding: 1rem; text-align: center; font-style: italic; font-size: 0.9em;">
+                            Tableau du classement officiel du championnat, incluant la position du FC Fulbert.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: white;">
+            <div class="container">
+                <h2>À Propos du Club de Football FC Fulbert</h2>
+                <article style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                    <p style="margin-bottom: 1rem;">
+                        Le <strong>FC Fulbert</strong> est un club de football qui incarne les valeurs du sport collectif et de l'excellence sportive. 
+                        Fondé avec la passion du ballon rond, le FC Fulbert s'est imposé comme une référence dans le monde du football amateur et semi-professionnel.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        Notre équipe du <strong>FC Fulbert</strong> se distingue par son jeu offensif et son état d'esprit combatif. 
+                        Les <strong>joueurs du FC Fulbert</strong> sont reconnus pour leur technique, leur engagement et leur esprit d'équipe.
+                    </p>
+                    <p>
+                        Le <strong>classement du FC Fulbert</strong> reflète le travail acharné de nos joueurs et de notre staff technique. 
+                        Chaque match est une opportunité de démontrer la qualité du football pratiqué par le FC Fulbert. Pour voir le détail de la <strong>liste des joueurs du FC Fulbert</strong>, cliquez <a href="#joueurs" title="Voir la liste complète des joueurs">ici</a>.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FC FULBERT - Club Officiel</h3>
+                    <p>Le club de football qui fait vibrer les passionnés. Suivez toute l'actualité du FC Fulbert, nos joueurs et notre classement en direct.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation Rapide</h3>
+                    <ul>
+                        <li><a href="#accueil" title="Accueil FC Fulbert">Accueil FC Fulbert</a></li>
+                        <li><a href="#joueurs" title="Liste des Joueurs du FC Fulbert">Liste des Joueurs</a></li>
+                        <li><a href="#classement" title="Classement du FC Fulbert">Classement</a></li>
+                        <li><a href="#contact" title="Contacter le club FC Fulbert">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Informations de Contact</h3>
+                    <ul>
+                        <li>Email: contact@fcfulbert.fr</li>
+                        <li>Téléphone: 01 23 45 67 89</li>
+                        <li>Adresse: Stade Fulbert</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #374151;">
+                <p>&copy; 2024 FC Fulbert - Tous droits réservés | Site Officiel du Club de Football</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Données des joueurs du FC Fulbert
+        const players = [
+            { number: 1, name: 'Martin Dubois', position: 'Gardien', goals: 0, assists: 2, matches: 18 },
+            { number: 4, name: 'Alexandre Leroux', position: 'Défenseur', goals: 3, assists: 1, matches: 17 },
+            { number: 5, name: 'Thomas Bernard', position: 'Défenseur', goals: 2, assists: 3, matches: 18 },
+            { number: 7, name: 'Lucas Moreau', position: 'Milieu', goals: 8, assists: 12, matches: 18 },
+            { number: 10, name: 'Julien Petit', position: 'Milieu', goals: 12, assists: 8, matches: 17 },
+            { number: 11, name: 'Nicolas Laurent', position: 'Attaquant', goals: 15, assists: 5, matches: 18 },
+            { number: 9, name: 'Pierre Roux', position: 'Attaquant', goals: 14, assists: 6, matches: 16 },
+            { number: 3, name: 'Antoine Girard', position: 'Défenseur', goals: 1, assists: 2, matches: 15 },
+            { number: 8, name: 'Maxime Bonnet', position: 'Milieu', goals: 6, assists: 9, matches: 18 },
+        ];
+
+        // Données du classement
+        const ranking = [
+            { position: 1, team: 'AS Chartres', pts: 42, j: 18, g: 13, n: 3, p: 2, diff: '+24' },
+            { position: 2, team: 'FC Fulbert', pts: 38, j: 18, g: 12, n: 2, p: 4, diff: '+18', highlight: true },
+            { position: 3, team: 'ES Dreux', pts: 35, j: 18, g: 10, n: 5, p: 3, diff: '+12' },
+            { position: 4, team: 'US Lucé', pts: 32, j: 18, g: 9, n: 5, p: 4, diff: '+8' },
+            { position: 5, team: 'FC Maintenon', pts: 28, j: 18, g: 8, n: 4, p: 6, diff: '+3' },
+            { position: 6, team: 'Olympique Nogent', pts: 25, j: 18, g: 7, n: 4, p: 7, diff: '-2' },
+            { position: 7, team: 'AS Auneau', pts: 22, j: 18, g: 6, n: 4, p: 8, diff: '-5' },
+            { position: 8, team: 'FC Vernouillet', pts: 18, j: 18, g: 5, n: 3, p: 10, diff: '-12' },
+        ];
+
+        // Générer les cartes de joueurs
+        function displayPlayers(playersList) {
+            const grid = document.getElementById('playersGrid');
+            grid.innerHTML = playersList.map(player => `
+                <article class="player-card" itemscope itemtype="http://schema.org/Person">
+                    <div class="player-number">${player.number}</div>
+                    <h3 class="player-name" itemprop="name" title="Fiche du joueur ${player.name} - FC Fulbert">${player.name}</h3>
+                    <p class="player-position" itemprop="jobTitle">${player.position}</p>
+                    <div class="player-stats">
+                        <div class="stat" itemprop="numberOfGoals">
+                            <div class="stat-value">${player.goals}</div>
+                            <div class="stat-label">Buts</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${player.assists}</div>
+                            <div class="stat-label">Passes</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${player.matches}</div>
+                            <div class="stat-label">Matchs joués</div>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        // Générer le tableau de classement
+        function displayRanking() {
+            const table = document.getElementById('rankingTable');
+            table.innerHTML = ranking.map(team => `
+                <tr class="${team.highlight ? 'highlight-team' : ''}" title="Classement de l'équipe ${team.team}">
+                    <td class="position">${team.position}</td>
+                    <td>
+                        <span class="team-logo">${team.team.charAt(0)}</span>
+                        <strong>${team.team === 'FC Fulbert' ? 'FC Fulbert' : team.team}</strong>
+                    </td>
+                    <td><strong>${team.pts}</strong></td>
+                    <td>${team.j}</td>
+                    <td>${team.g}</td>
+                    <td>${team.n}</td>
+                    <td>${team.p}</td>
+                    <td>${team.diff}</td>
+                </tr>
+            `).join('');
+        }
+        
+        // Fonction de recherche
+        document.getElementById('searchPlayer').addEventListener('input', (e) => {
+            const search = e.target.value.toLowerCase();
+            const filtered = players.filter(player => 
+                player.name.toLowerCase().includes(search) || 
+                player.position.toLowerCase().includes(search)
+            );
+            displayPlayers(filtered);
+        });
+
+        // Navigation fluide
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Initialisation
+        displayPlayers(players);
+        displayRanking();
+
+        // Animation au scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.player-card, .ranking-table').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TCDMV3ZZ');</script>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,8 +59,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <ul>
                 <li><a href="#accueil" title="Actualités et Accueil du FC Fulbert">Accueil</a></li>
+                <li><a href="#actu" title="Actualités et prochains matchs">Actus & Matchs</a></li>
                 <li><a href="#joueurs" title="Liste complète des joueurs du FC Fulbert">Joueurs</a></li>
                 <li><a href="#classement" title="Classement officiel du FC Fulbert">Classement</a></li>
+                <li><a href="#stade" title="Le Stade Fulbert et l'Esprit Communautaire">Stade & Communauté</a></li>
                 <li><a href="#contact" title="Contacter le club FC Fulbert">Contact</a></li>
             </ul>
         </nav>
@@ -74,31 +76,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <section class="hero" id="accueil">
-        <h1>Bienvenue au <strong>FC FULBERT</strong>, votre club de football</h1>
-        <p>Passion, Excellence et Esprit d'Équipe. Suivez le classement et les joueurs du FC Fulbert.</p>
+        <h1>Bienvenue au FC FULBERT, club officiel de football</h1>
+        <p>Passion, Excellence et Esprit d'Équipe. Suivez le classement du FC Fulbert et consultez la liste des joueurs en un clic.</p>
         <a href="#joueurs" class="cta-button" title="Découvrir l'Effectif du FC Fulbert">Découvrir l'Équipe</a>
     </section>
 
     <main>
+        <section id="actu" style="background-color: #eef2ff;">
+            <div class="container">
+                <h2>Actualités et Prochains Matchs du FC Fulbert</h2>
+                <p style="text-align: center; margin-bottom: 3rem; color: var(--text);">
+                    Toute l'actualité de notre équipe et le calendrier des prochains matchs du FC Fulbert en championnat. Retrouvez ici les analyses d'avant-match et les résumés des rencontres précédentes.
+                </p>
+
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+                    <div class="player-card" style="flex: 1; min-width: 300px; max-width: 400px; text-align: center;">
+                        <h3 class="player-name">Prochain Rendez-vous sur nos Terres</h3>
+                        <p class="player-position">Championnat - Journée 19</p>
+                        <p style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0; color: var(--primary);">FC Fulbert vs. ES Dreux</p>
+                        <p>Date : Samedi 25 Octobre | Heure : 20h00 | Lieu : Stade Fulbert. Venez nombreux encourager le club à conforter sa position dans le classement.</p>
+                        <a href="#classement" class="cta-button" style="margin-top: 1rem; padding: 0.5rem 1.5rem;">Voir le classement</a>
+                    </div>
+                    
+                    <div class="player-card" style="flex: 1; min-width: 300px; max-width: 400px; text-align: center;">
+                        <h3 class="player-name">Bilan de la Journée Précédente</h3>
+                        <p class="player-position">Victoire à l'extérieur !</p>
+                        <p style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0; color: var(--primary);">Olympique Nogent 1 - 3 FC Fulbert</p>
+                        <p>Un grand match de l'équipe, notamment de Nicolas Laurent, buteur décisif. L'équipe consolide sa 2ème place au classement. Les performances individuelles de la liste des joueurs sont excellentes en ce début de saison.</p>
+                        <a href="#joueurs" class="cta-button" style="margin-top: 1rem; padding: 0.5rem 1.5rem;">Fiche des joueurs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section id="joueurs">
             <div class="container">
-                <h2>Liste des Joueurs Officiels du FC Fulbert</h2>
+                <h2>La Liste des Joueurs Officiels du Club</h2>
                 <p style="text-align: center; margin-bottom: 2rem; color: var(--text);">
-                    Retrouvez ici la liste complète et les statistiques de tous les joueurs du FC Fulbert.
+                    Retrouvez ici l'effectif complet du FC Fulbert et toutes les statistiques individuelles de nos athlètes. Cette section est mise à jour après chaque mercato et permet d'accéder aux performances détaillées de la liste des joueurs du FC Fulbert.
                 </p>
                 <div class="search-box">
-                    <input type="text" class="search-input" id="searchPlayer" placeholder="Rechercher un joueur du FC Fulbert par nom ou poste...">
+                    <input type="text" class="search-input" id="searchPlayer" placeholder="Rechercher un joueur par nom ou poste...">
                 </div>
                 <div class="players-grid" id="playersGrid">
                     </div>
             </div>
         </section>
 
-        <section id="classement">
+        <section id="classement" style="background-color: white;">
             <div class="container">
-                <h2>Classement du FC Fulbert en Championnat</h2>
+                <h2>Classement du Championnat de l'équipe du FC Fulbert</h2>
                 <p style="text-align: center; margin-bottom: 2rem; color: var(--text);">
-                    Suivez en direct le <strong>classement du FC Fulbert</strong> dans le championnat. Notre équipe est actuellement classée 2ème.
+                    Suivez en direct le classement du FC Fulbert dans le championnat. Notre équipe est actuellement classée 2ème, un résultat qui reflète la qualité de nos joueurs et notre position historique. Consultez le tableau pour connaître tous les résultats et les écarts de points avec les concurrents directs.
                 </p>
                 <div class="ranking-table">
                     <figure>
@@ -119,10 +149,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </tbody>
                         </table>
                         <figcaption style="padding: 1rem; text-align: center; font-style: italic; font-size: 0.9em;">
-                            Tableau du classement officiel du championnat, incluant la position du FC Fulbert.
+                            Tableau du classement officiel du championnat, incluant la position du FC Fulbert. Les matchs sont mis à jour chaque semaine.
                         </figcaption>
                     </figure>
                 </div>
+            </div>
+        </section>
+
+        <section id="histoire">
+            <div class="container">
+                <h2>Historique et Valeurs Fortes du FC Fulbert</h2>
+                <article style="max-width: 900px; margin: 0 auto; line-height: 1.8; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                    
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Notre Fondation et Héritage</h3>
+                        <p style="margin-bottom: 1rem;">
+                            Le FC Fulbert a été fondé en 1952 par un groupe de passionnés souhaitant créer une équipe capable de rivaliser au plus haut niveau régional. Dès les premières années, le club s'est bâti une réputation de formation d'excellence, mettant l'accent sur le développement des jeunes talents locaux. L'héritage du club est riche en succès et en moments mémorables qui ont forgé notre identité actuelle, de la création de la première équipe à l'obtention des meilleurs classements régionaux.
+                        </p>
+                        <p>
+                            De nombreux joueurs issus de l'académie du FC Fulbert ont ensuite rejoint les plus grands championnats, prouvant la qualité du travail effectué au sein de notre structure. Notre histoire est celle d'une communauté unie derrière ses couleurs. Nous sommes fiers de notre parcours et déterminés à atteindre la première place du classement.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Nos Valeurs Fondamentales du Club</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 0.5rem;"><strong>⚽ Respect :</strong> Respect de l'adversaire, des arbitres et des supporters, car le football est avant tout un jeu et une passion partagée.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>🤝 Engagement :</strong> Dépassement de soi et engagement total sur le terrain de chaque joueur du FC Fulbert. C'est l'essence même de notre maillot et de notre combativité.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>🌐 Esprit d'équipe :</strong> La force de notre club réside dans la cohésion, essentielle pour maintenir un bon classement du FC Fulbert en fin de saison. Nous jouons ensemble, nous gagnons ensemble.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>🌟 Excellence :</strong> Viser le meilleur, tant sur le plan sportif que dans la gestion du club. L'objectif est de toujours progresser pour offrir le meilleur à nos fans.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="stade" style="background-color: #eef2ff;">
+            <div class="container">
+                <h2>Le Stade Fulbert : Notre Maison et Notre Fierté</h2>
+                <article style="max-width: 1000px; margin: 0 auto; line-height: 1.8; text-align: justify;">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem; text-align: center;">Un lieu emblématique pour le FC Fulbert</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        Le Stade Fulbert n'est pas seulement le lieu où se déroulent les matchs à domicile, c'est le cœur battant de toute la communauté du FC Fulbert. Avec une capacité de 5 000 places, il offre une atmosphère électrique unique lors de chaque rencontre. Les joueurs du FC Fulbert se sentent portés par l'énergie des tribunes, un atout majeur qui se reflète souvent dans les résultats et dans le maintien de notre bon classement. Le stade est également le lieu de vie de notre académie, accueillant des entraînements quotidiens pour nos équipes jeunes et assurant la relève de la liste des joueurs.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Chaque week-end, l'ambiance y est festive et familiale. Des animations sont proposées pour tous les âges avant le coup d'envoi et à la mi-temps. Nous sommes fiers d'accueillir des supporters de la région et d'ailleurs, tous unis par la passion du football et les couleurs de notre club. L'accès au stade est facilité par des transports en commun et un parking dédié pour assurer un accueil optimal à tous les fans du FC Fulbert.
+                    </p>
+                    
+                    <h3 style="color: var(--primary); margin-top: 2rem; margin-bottom: 1rem; text-align: center;">La Communauté et l'Avenir du Club</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        Le FC Fulbert s'appuie sur une base solide de bénévoles, de parents et de supporters inconditionnels. Notre association de supporters, "Les Fidèles de Fulbert", organise les déplacements pour les matchs à l'extérieur et crée des tifos mémorables à domicile. Sans cette ferveur, les performances affichées par la liste des joueurs ne seraient pas les mêmes. L'engagement local est au centre de notre projet sportif, nous travaillons main dans la main avec la municipalité.
+                    </p>
+                    <p>
+                        Notre vision pour l'avenir est claire : continuer à développer nos jeunes talents, viser la première place du classement et renforcer les liens avec notre ville. Nous investissons dans nos infrastructures pour garantir que le FC Fulbert reste un club formateur de référence. Chaque contribution, qu'elle soit financière ou humaine, est essentielle pour l'avenir du FC Fulbert. Pour toute information sur les abonnements ou pour rejoindre le club en tant que bénévole, veuillez consulter notre section contact ci-dessous.
+                    </p>
+                </article>
             </div>
         </section>
 
@@ -131,16 +212,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2>À Propos du Club de Football FC Fulbert</h2>
                 <article style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
                     <p style="margin-bottom: 1rem;">
-                        Le <strong>FC Fulbert</strong> est un club de football qui incarne les valeurs du sport collectif et de l'excellence sportive. 
-                        Fondé avec la passion du ballon rond, le FC Fulbert s'est imposé comme une référence dans le monde du football amateur et semi-professionnel.
+                        Le FC Fulbert est un club de football qui incarne les valeurs du sport collectif et de l'excellence sportive. 
+                        Fondé avec la passion du ballon rond, le club s'est imposé comme une référence dans le monde du football amateur et semi-professionnel. Nous invitons tous les supporters à consulter régulièrement notre site pour les dernières informations sur le club et l'équipe première, de la liste des joueurs aux analyses tactiques.
                     </p>
                     <p style="margin-bottom: 1rem;">
-                        Notre équipe du <strong>FC Fulbert</strong> se distingue par son jeu offensif et son état d'esprit combatif. 
-                        Les <strong>joueurs du FC Fulbert</strong> sont reconnus pour leur technique, leur engagement et leur esprit d'équipe.
-                    </p>
-                    <p>
-                        Le <strong>classement du FC Fulbert</strong> reflète le travail acharné de nos joueurs et de notre staff technique. 
-                        Chaque match est une opportunité de démontrer la qualité du football pratiqué par le FC Fulbert. Pour voir le détail de la <strong>liste des joueurs du FC Fulbert</strong>, cliquez <a href="#joueurs" title="Voir la liste complète des joueurs">ici</a>.
+                        Notre équipe se distingue par son jeu offensif et son état d'esprit combatif. 
+                        Les joueurs sont reconnus pour leur technique et leur engagement au sein du FC Fulbert. Le staff technique travaille sans relâche pour assurer la meilleure performance possible et préparer au mieux les prochains matchs du championnat, en visant un meilleur classement que la saison précédente.
                     </p>
                 </article>
             </div>
@@ -158,8 +235,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3>Navigation Rapide</h3>
                     <ul>
                         <li><a href="#accueil" title="Accueil FC Fulbert">Accueil FC Fulbert</a></li>
+                        <li><a href="#actu" title="Actualités et matchs du club">Actualités & Matchs</a></li>
                         <li><a href="#joueurs" title="Liste des Joueurs du FC Fulbert">Liste des Joueurs</a></li>
                         <li><a href="#classement" title="Classement du FC Fulbert">Classement</a></li>
+                        <li><a href="#stade" title="Informations sur le Stade Fulbert">Stade & Communauté</a></li>
                         <li><a href="#contact" title="Contacter le club FC Fulbert">Contact</a></li>
                     </ul>
                 </div>
